@@ -49,8 +49,8 @@
         $th_desc=str_replace(">","&gt","$th_desc");
         
         $sno=$_POST['sno'];
-        $sql="INSERT INTO `threadlist` (`Thread_Id`, `Thread_Title`, `Thread_desc`, `Thread_cat_id`, `Thread_user_id`, `TimeStmp`) VALUES
-         (NULL, '$th_title', '$th_desc', '$id', '$sno', current_timestamp());";
+        $sql="INSERT INTO `threadlist` ( `Thread_Title`, `Thread_desc`, `Thread_cat_id`, `Thread_user_id`, `TimeStmp`) VALUES
+         ('$th_title', '$th_desc', '$id', '$sno', current_timestamp());";
         $result=mysqli_query($conn, $sql);
         $showAlart=true;
     }
